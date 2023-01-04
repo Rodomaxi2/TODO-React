@@ -47,7 +47,18 @@ function App() {
             text: todos[todoIndex].text,
             completed: true,
         }
-        setTodos(newTodos)
+        setTodos(newTodos);
+    }
+
+    const deleteTodos = (text) => {
+        const todoIndex = todos.findIndex(todo => todo.text === text);
+        const toDelete = [todos[todoIndex]];
+
+        const newTodos = todos.filter( (todo) => !toDelete.includes(todo))
+
+        setTodos(newTodos);
+        console.log(todoIndex);
+        console.log(newTodos);
     }
 
     return (
@@ -70,6 +81,7 @@ function App() {
                         text={todo.text}
                         completed={todo.completed}
                         onComplete={() => completeTodos(todo.text)}
+                        onDelete={() => deleteTodos(todo.text)}
                         />
                             
                     ))
