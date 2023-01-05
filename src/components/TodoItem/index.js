@@ -3,13 +3,13 @@ import './TodoItem.css';
 
 function TodoItem(props) {
 
-    const onComplete = () => {
-        alert('Se completo el TODO ' + props.text);
-    }
+    // const onComplete = () => {
+    //     alert('Se completo el TODO ' + props.text);
+    // }
 
-    const onDelete = () => {
-        alert('Se elimino el TODO ' + props.text);
-    }
+    // const onDelete = () => {
+    //     alert('Se elimino el TODO ' + props.text);
+    // }
 
     return(
         <li className="TodoItem">
